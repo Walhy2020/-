@@ -1,0 +1,15 @@
+{
+  "head": {
+    "width": 532,
+    "height": 326,
+    "anchor": {
+      "x": 283.956,
+      "y": 183.257
+    },
+    "source": "Original Flying Star raster layers; boot layers Part_03/04 omitted."
+  },
+  "segment": {
+    "width": 512,
+    "height": 512
+  }
+}

@@ -1,0 +1,15 @@
+tmp/
+output/
+__pycache__/
+node_modules/
+.env
+.env.*
+research/round-*.mjs
+research/captures-*.json
+research/searches-*.json
+research/sources-*.json
+research/贪吃蛇游戏截图与清单/
+research/贪吃蛇游戏截图与清单.zip
+research/screenshots/test.png
+research/screenshots/tcsdzz-2.png
+research/screenshots/tcsdzz-3.png

@@ -1,0 +1,4 @@
+Use case: stylized-concept.
+Asset type: one reusable blank game-body segment sprite for a Chinese literacy game.
+Create exactly ONE front-facing rounded-square cream toy tile, with a softly raised warm golden-yellow rounded rim, a very large flat clean blank ivory face, subtle thickness and soft polished 2.5D cartoon shading. Keep the tile symmetric, upright, unrotated, with almost no perspective distortion. The face must be completely empty so software can place different Chinese characters on it later. No text, glyphs, markings, face, eyes, symbols or decorations.
+Center the entire isolated tile with generous margins on an absolutely flat solid vivid magenta #ff00ff background for chroma-key extraction. Do not use magenta on the tile. Soft upper-left lighting on the tile, no cast shadow outside its silhouette, no extra props, no border around the image, no watermark. This is a practical repeatable game sprite, not a scene or a complete snake illustration.

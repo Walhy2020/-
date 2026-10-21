@@ -1,0 +1,58 @@
+[
+  {
+    "id": "tcsdzz",
+    "name": "贪吃蛇大作战",
+    "url": "https://apps.apple.com/cn/app/%E8%B4%AA%E5%90%83%E8%9B%87%E5%A4%A7%E4%BD%9C%E6%88%98/id1120536875",
+    "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/bf/46/46/bf46468f-e92d-33ad-a0f2-7c47f241b9d1/2.png/1286x594bb.webp",
+    "path": "D:/AI2026/贪吃蛇/research/screenshots/tcsdzz.png"
+  },
+  {
+    "id": "slither",
+    "name": "slither.io",
+    "url": "https://play.google.com/store/apps/details?id=air.com.hypah.io.slither&hl=en",
+    "imageUrl": "https://play-lh.googleusercontent.com/RjYPkT3X-yhF1gFS1DW9lOFMH89D-dExZCHfkup9WUpOwzhZgL62fWlaNsljXwfd3yUwRiC_26EJ7G9lKDY2=w1052-h592-rw",
+    "path": "D:/AI2026/贪吃蛇/research/screenshots/slither.png"
+  },
+  {
+    "id": "snakeio",
+    "name": "Snake.io",
+    "url": "https://play.google.com/store/apps/details?id=com.amelosinteractive.snake&hl=en",
+    "imageUrl": "https://play-lh.googleusercontent.com/n2oU7y3FeEQa9_PB2nk4OLQx1X7p9mY7ZmvYvp6fWqbQOsvYwIg58Et9GW5PUPRtfMovtGr4nIIZH7tYCjkV5IU=w1052-h592-rw",
+    "path": "D:/AI2026/贪吃蛇/research/screenshots/snakeio.png"
+  },
+  {
+    "id": "wormszone",
+    "name": "Worms Zone",
+    "url": "https://play.google.com/store/apps/details?id=com.wildspike.wormszone&hl=en",
+    "imageUrl": "https://play-lh.googleusercontent.com/HT0TqN4JjGLOm4EblMD4Ihhj94PUoIn-_ES0lolmuXzknIhBS_9SAPAcwHLjdLWslaTMcS20U83LyVfeheM_zw=w1052-h592-rw",
+    "path": "D:/AI2026/贪吃蛇/research/screenshots/wormszone.png"
+  },
+  {
+    "id": "snakeclash",
+    "name": "Snake Clash!",
+    "url": "https://play.google.com/store/apps/details?id=io.supercent.linkedcubic&hl=en",
+    "imageUrl": "https://play-lh.googleusercontent.com/6yVqgBKdsOr5bd1Zsq56aLt5F1pGSePDg3UvJJ5qFF5ygJdcUdqNzGq5T6NtL769SLv0QSZGchgmnBSaBZni0A=w1052-h592-rw",
+    "path": "D:/AI2026/贪吃蛇/research/screenshots/snakeclash.png"
+  },
+  {
+    "id": "sssnaker",
+    "name": "SSSnaker",
+    "url": "https://play.google.com/store/apps/details?id=com.habby.sssnaker&hl=en",
+    "imageUrl": "https://play-lh.googleusercontent.com/oXRhKFTnolKw2nibUFjx6R4nydEoqlfDnsuIunMqCuX5m85r2piUMc9yunyNs1wl9YKIRlk7HDcdbFOy5gAXbA=w1052-h592-rw",
+    "path": "D:/AI2026/贪吃蛇/research/screenshots/sssnaker.png"
+  },
+  {
+    "id": "snakevsblock",
+    "name": "Snake VS Block",
+    "url": "https://play.google.com/store/apps/details?id=com.bentostudio.ballsvsblocks&hl=en",
+    "imageUrl": "https://play-lh.googleusercontent.com/T4p9SKUC3EDhk84gBMVsDy4posgvedi17M2uR--X2fI4n6eFCZYGGGTaHHf15gYBYdtGDg4jnp4Hv8auo_EYYQ=w1052-h592-rw",
+    "path": "D:/AI2026/贪吃蛇/research/screenshots/snakevsblock.png"
+  },
+  {
+    "id": "snakebird",
+    "name": "Snakebird",
+    "url": "https://play.google.com/store/apps/details?id=com.NoumenonGames.SnakeBird_Touch&hl=en",
+    "imageUrl": "https://play-lh.googleusercontent.com/BCYhDIb43oZ3OMpZ_uVHAjJHVjhsSivT0laDxkFmlt2UpkIbkEXAZ6JMThyf53_B_JkuEMI5eSlgME-xZ_4fBA=w1052-h592-rw",
+    "path": "D:/AI2026/贪吃蛇/research/screenshots/snakebird.png"
+  }
+]

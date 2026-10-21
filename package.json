@@ -1,0 +1,7 @@
+{
+  "name": "flystar-hanzi-snake",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": { "test": "node --test tests/*.test.mjs", "check": "node --check src/game.js && node --check src/trail.js" }
+}

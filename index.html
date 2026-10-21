@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f4f7ee">
+  <title>小飞星 · 汉字长龙</title>
+  <link rel="icon" href="./assets/flystar-head-v1.png">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="app">
+    <header class="page-header">
+      <div class="brand"><img src="./assets/flystar-head-v1.png" alt="" width="76" height="54"><div><h1>小飞星<span>汉字长龙</span></h1><p>吃一个字，长一节。带着汉字一起出发。</p></div></div>
+      <span class="mode-pill" id="modeLabel">自动演示</span>
+    </header>
+    <div class="layout">
+      <section class="play-column" aria-label="游戏">
+        <div class="mission-bar">
+          <div class="mission"><span class="mission-label">下一站，找到</span><strong id="targetGlyph">山</strong><button id="speakButton" class="sound-button" type="button" aria-label="听目标字的读音">听读音 <span aria-hidden="true">♪</span></button></div>
+          <div class="length-stat"><strong id="lengthCount">8</strong><span>节汉字</span></div>
+        </div>
+        <div class="stage" id="stage">
+          <canvas id="game" tabindex="0" aria-label="小飞星游戏区域，方向键或 WASD 转向，空格暂停"></canvas>
+          <div id="loading" class="loading">小飞星准备出发…</div>
+          <div id="pauseOverlay" class="pause-overlay" hidden><span id="pauseTitle">休息一下</span><button id="resumeButton" type="button">继续出发</button></div>
+          <div id="message" class="message" aria-live="polite">看，小飞星正在带着汉字转弯</div>
+          <span class="stage-hint" id="stageHint">按方向键，接过小飞星的方向盘</span>
+        </div>
+        <div class="controls">
+          <div class="main-controls"><button id="startButton" class="primary" type="button">开始操控 <span aria-hidden="true">↗</span></button><button id="autoButton" class="secondary" type="button" aria-pressed="true">自动演示</button><button id="resetButton" class="text-button" type="button">重新开始</button></div>
+          <p class="keyboard-hint">方向键 / WASD 转向 · 按住场地拖动 · 空格暂停</p>
+        </div>
+        <div class="direction-pad" aria-label="方向控制"><button data-direction="up" aria-label="向上" type="button">↑</button><button data-direction="left" aria-label="向左" type="button">←</button><button data-direction="down" aria-label="向下" type="button">↓</button><button data-direction="right" aria-label="向右" type="button">→</button></div>
+      </section>
+      <aside class="sidebar">
+        <section class="bag-card"><span class="section-kicker">一路收集</span><h2>我的汉字队伍</h2><p>每个字，都是身体的一节。</p><div id="glyphBag" class="glyph-bag" aria-label="当前队伍中的汉字"></div><div class="collected-line">本次收集 <strong id="collectedCount">0</strong> 个字</div></section>
+        <section class="guide-card"><span class="guide-star" aria-hidden="true">✦</span><h2>跟着小飞星，慢慢来</h2><p>找到上面的目标字，靠近它，就能让队伍再长一节。</p><p>转弯的时候，字也会跟着走，每个字都端端正正。</p></section>
+      </aside>
+    </div>
+  </main>
+  <script type="module" src="./src/game.js"></script>
+</body>
+</html>
