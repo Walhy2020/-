@@ -1,0 +1,7 @@
+Use case: precise-object-edit
+Asset type: medium collectible virus sprite for a children's game, shown at 52 game units
+Input image: edit target, the existing medium lavender virus sprite
+Primary request: Make the round central body noticeably smaller and lengthen its six short bumps into six slender, gently curved antennae with softly rounded tips. The antennae should extend well beyond the body's edge, remain connected to it, and read clearly at icon size.
+Style and color: preserve the original polished soft 2.5D lavender material, upper-left highlight, simple two dark-purple oval eyes, friendly expression, and soft shading.
+Composition: one centered complete creature, same front view, with generous clear margin on all sides.
+Constraints: no mouth, no cheek marks, no feet, no text, no extra objects. Keep a genuinely transparent background and clean natural alpha edges. Do not enlarge the overall silhouette beyond the existing sprite's footprint.

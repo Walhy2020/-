@@ -1,0 +1,7 @@
+Use case: precise-object-edit
+Asset type: medium collectible virus sprite for a children's game, shown at about 52 game units
+Input image: edit target, the original medium lavender virus sprite with one large round body, two eyes, and six short rounded bumps
+Primary request: Make the six existing bumps only a little longer, extending each one outward by approximately 15 to 20 percent of its current projection beyond the body. Keep them broad, soft, and nub-like, directly attached to the ball. Keep their original positions, count, and roughly even spacing. This is a subtle silhouette edit, not a redesign.
+Style and color: preserve the input's polished soft 2.5D lavender material, upper-left highlight, gentle purple rim, two dark-purple oval eyes, friendly expression, and soft shading.
+Composition: one centered complete creature, same front view and same overall scale as the input, with clear margin on all sides.
+Constraints: keep the large central body the same size and shape; keep the eyes exactly where they are. Do not create slender stalks, long antennae, separate bulb tips, arms, legs, mouth, cheeks, text, or extra objects. Genuinely transparent background and clean natural alpha edges.

@@ -1,0 +1,4 @@
+Use case: stylized-concept.
+Asset type: seamless repeating top-down arena floor texture for a children's snake game.
+Primary request: a quiet soft powder-teal and misty blue-green game floor inspired by bright friendly mobile snake arenas. Subtle large regular hexagonal paving, a few scattered low-contrast translucent lighter hexagonal cells, softly polished matte surface. Flat orthographic overhead view, uniform diffuse lighting. The pattern must repeat seamlessly on all four edges. Keep contrast low so golden star characters and large Chinese characters stand out clearly. Clean, calm, spacious, soft 2.5D cartoon game art, not photorealistic.
+Constraints: cover the entire square edge to edge with uninterrupted floor. No scenery, buildings, grass, rocks, walls, borders, arena outline, path, horizon, vignette, perspective, characters, food, letters, symbols, UI, logo or watermark. No large central focal point. Muted light teal palette, not dark neon.

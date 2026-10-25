@@ -1,0 +1,7 @@
+Use case: precise-object-edit
+Asset type: small collectible virus sprite for a children's game, shown at about 36 game units
+Input image: edit target, the existing small lavender virus sprite
+Primary request: Replace the protruding antennae completely. The creature should read as one almost perfectly circular, smooth round ball. Add only six to eight small, shallow, soft rounded bumps directly on the outer circumference, like slight scallops or blisters in the ball's edge. Each bump is fused flush to the circle with no stem, neck, stalk, tentacle, spike, or separate bulb. Keep the silhouette compact and predominantly circular.
+Style and color: preserve the input's polished soft 2.5D lavender material, upper-left highlight, gentle purple rim, and calm friendly mood.
+Composition: one centered complete creature, same front view, with generous clear margin on all sides. The circular body should fill roughly 65 percent of the canvas width.
+Constraints: no eyes, no mouth, no face, no feet, no text, no extra objects. Genuinely transparent background and clean natural alpha edges. Do not recreate any long appendages from the reference image.

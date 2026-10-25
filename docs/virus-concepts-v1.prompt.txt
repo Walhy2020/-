@@ -1,0 +1,11 @@
+Use case: stylized-concept.
+Asset type: three candidate collectible virus sprites for a Chinese literacy snake game for a six-year-old.
+Primary request: a polished concept sheet containing exactly three different cute virus creatures, arranged in a single horizontal row with generous empty space between them. They are growth food eaten by a friendly golden winged star. The viruses must read instantly as tiny round microbes at a small gameplay size, with a soft round body and short rounded spore-like nubs, not sharp spikes. Each creature has two simple dark oval eyes and a tiny goofy mouth. No limbs, feet, wings, accessories or text.
+Candidate on left: saturated lilac-purple plump ball with eight evenly distributed short round mushroom-tip nubs, large friendly eyes and a tiny surprised O mouth. Strongest and simplest silhouette; recommended base design.
+Candidate in middle: warm coral-orange squishy ball with six thick rounded bumps, slightly asymmetrical face and one tiny tooth, playful and harmless.
+Candidate on right: pale mint-green jelly ball with seven short round nubs, sleepy eyes and a little smile, a translucent-looking material but opaque solid silhouette.
+Style/medium: high-quality soft 2.5D mobile-game collectible art, smooth inflated forms with warm highlights, gentle ambient shading, crisp clean dark warm-purple contour, like polished friendly game item sprites. Match the smooth shaded golden star style of the existing game, not a flat emoji or pixel art.
+Composition/framing: 1536x1024 landscape. All three creatures at equal visual size, centered vertically at the same height, each entire silhouette fully visible and occupying around 350x350 pixels. Consistent mostly front-facing top-oblique camera, no perspective ground plane. Clear spacing for later sprite extraction.
+Scene/backdrop: perfectly uniform pure white background. No shadows on background, no scenery, no interface, no card frames. Do not draw a checkerboard.
+Lighting/mood: soft diffuse upper-left lighting, playful, friendly and readable at 48 pixels.
+Constraints: exactly three isolated creatures. No scary disease imagery, gore, wet slime, sharp teeth, medical symbols, skulls, labels, typography, watermark or decorative sparkles. Each design must remain simple with a clear round silhouette.

@@ -51,13 +51,36 @@ export class GlyphTrail {
     this.glyphs.push(glyph);
   }
 
-  positions() {
-    const offsets = this.glyphs.map((_, i) => this.leadGap + i * this.spacing);
+  shrink(count) {
+    const lost = Math.min(this.glyphs.length, Math.max(0, Math.floor(count)));
+    this.glyphs.splice(this.glyphs.length - lost, lost);
+    this.trim();
+    return lost;
+  }
+
+  setLayout(spacing, leadGap) {
+    this.spacing = spacing;
+    this.leadGap = leadGap;
+    if (this.points.length < 2) return;
+    let length = 0;
+    for (let i = 1; i < this.points.length; i++) length += distance(this.points[i - 1], this.points[i]);
+    const required = leadGap + (this.glyphs.length + 12) * spacing;
+    if (length < required) {
+      const end = this.points.at(-1), before = this.points.at(-2);
+      const direction = Math.atan2(end.y - before.y, end.x - before.x);
+      this.points.push({ x: end.x + Math.cos(direction) * (required - length),
+        y: end.y + Math.sin(direction) * (required - length) });
+    }
+    this.trim();
+  }
+
+  positions(lag = 0) {
+    const offsets = this.glyphs.map((_, i) => lag + this.leadGap + i * this.spacing);
     return samplePath(this.points, offsets).map((point, i) => ({ ...point, glyph: this.glyphs[i] }));
   }
 
-  neck() {
-    return samplePath(this.points, [this.leadGap / 2])[0];
+  neck(lag = 0) {
+    return samplePath(this.points, [lag + this.leadGap / 2])[0];
   }
 
   trim() {

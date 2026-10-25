@@ -18,6 +18,20 @@ test("growth appends a character at the tail without moving existing letters", (
   assert.deepEqual(trail.positions()[2], { x: 100, y: 0, glyph: "鸟" });
 });
 
+test("damage removes two tail segments and leaves the head-first body intact", () => {
+  const trail = new GlyphTrail({ spacing: 30, leadGap: 40, glyphs: ["甲", "乙", "丙", "丁"] });
+  trail.reset([{ x: 200, y: 0 }, { x: -300, y: 0 }]);
+  const before = trail.positions();
+  assert.equal(trail.shrink(2), 2);
+  assert.deepEqual(trail.glyphs, ["甲", "乙"]);
+  assert.deepEqual(trail.positions(), before.slice(0, 2));
+  assert.equal(trail.shrink(2), 2);
+  assert.deepEqual(trail.positions(), []);
+  assert.equal(trail.shrink(2), 0);
+  trail.grow("星");
+  assert.equal(trail.positions().length, 1);
+});
+
 test("different frame subdivisions produce the same positions on a straight route", () => {
   const make = () => {
     const trail = new GlyphTrail({ glyphs: ["大", "山", "小", "鸟"] });

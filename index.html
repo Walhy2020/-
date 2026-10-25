@@ -4,41 +4,56 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#f4f7ee">
-  <title>小飞星 · 汉字长龙</title>
+  <title>小飞星 · 星星蛇</title>
   <link rel="icon" href="./assets/flystar-head-v1.png">
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
   <main class="app">
     <header class="page-header">
-      <div class="brand"><img src="./assets/flystar-head-v1.png" alt="" width="76" height="54"><div><h1>小飞星<span>汉字长龙</span></h1><p>吃一个字，长一节。带着汉字一起出发。</p></div></div>
-      <span class="mode-pill" id="modeLabel">自动演示</span>
+      <div class="brand"><img src="./assets/flystar-head-v1.png" alt="" width="76" height="54"><div><h1>小飞星<span>星星蛇</span></h1><p>吃病毒长身体，认汉字攒星星。</p><span id="currentVersion" class="current-version" aria-label="当前游戏版本" aria-live="polite">正在检查版本…</span></div></div>
+      <div class="header-actions"><span class="mode-pill" id="modeLabel">自动演示</span><button id="tuningToggle" class="tuning-toggle" type="button" aria-expanded="false" aria-controls="tuningPanel">游戏参数 ⚙</button></div>
     </header>
     <div class="layout">
-      <section class="play-column" aria-label="游戏">
+      <section class="play-column" id="playArea" aria-label="游戏">
         <div class="mission-bar">
           <div class="mission"><span class="mission-label">下一站，找到</span><strong id="targetGlyph">山</strong><button id="speakButton" class="sound-button" type="button" aria-label="听目标字的读音">听读音 <span aria-hidden="true">♪</span></button></div>
-          <div class="length-stat"><strong id="lengthCount">8</strong><span>节汉字</span></div>
+          <div class="mission-actions"><div class="length-stat"><strong id="lengthCount">8</strong><span>节身体</span></div><button id="fullscreenButton" class="fullscreen-button" type="button" aria-pressed="false">全屏游玩 ⛶</button></div>
+        </div>
+        <div class="growth-hud">
+          <div class="growth-meter"><label for="growthProgress">成长 <strong id="growthCount">0 / 10</strong></label><progress id="growthProgress" max="10" value="0" aria-label="身体成长进度"></progress><span id="growthRule">每 10 点长一节</span></div>
+          <div class="virus-legend" aria-label="病毒大小与成长值"><span><img src="./assets/virus-small-v4.png" class="virus-small" alt="小病毒"><b id="smallVirusValue">+1</b></span><span><img src="./assets/virus-medium-v4.png" class="virus-medium" alt="中病毒"><b id="mediumVirusValue">+3</b></span><span><img src="./assets/virus-purple-v1.png" class="virus-large" alt="大病毒"><b id="largeVirusValue">+5</b></span><span class="super-legend"><img src="./assets/virus-super-v2.png" class="virus-super" alt="超级病毒，需圈住吃"><span>圈住吃 <b id="superVirusValue">+30</b></span></span></div>
         </div>
         <div class="stage" id="stage">
-          <canvas id="game" tabindex="0" aria-label="小飞星游戏区域，方向键或 WASD 转向，空格暂停"></canvas>
+          <canvas id="game" tabindex="0" aria-label="小飞星游戏区域，方向键或 WASD 可组合斜走，手柄摇杆、方向键和 ABXY 转向，Q 和 E 连续转弯，拖动任意转向，空格暂停"></canvas>
+          <div class="star-counter" aria-label="星星积分"><img src="./assets/hanzi-star-v2.png" alt="" width="30" height="30"><strong id="starScore" aria-live="polite">0</strong></div>
           <div id="loading" class="loading">小飞星准备出发…</div>
           <div id="pauseOverlay" class="pause-overlay" hidden><span id="pauseTitle">休息一下</span><button id="resumeButton" type="button">继续出发</button></div>
-          <div id="message" class="message" aria-live="polite">看，小飞星正在带着汉字转弯</div>
+          <div id="message" class="message" aria-live="polite">吃病毒攒成长，认对汉字得星星</div>
           <span class="stage-hint" id="stageHint">按方向键，接过小飞星的方向盘</span>
+          <div class="mini-map" aria-label="方形地图总览，金色光点是小飞星，方框是当前视野"><span id="mapView" class="map-view"></span><i id="mapDot" class="map-dot"></i><span class="map-caption">星星原野</span></div>
         </div>
         <div class="controls">
-          <div class="main-controls"><button id="startButton" class="primary" type="button">开始操控 <span aria-hidden="true">↗</span></button><button id="autoButton" class="secondary" type="button" aria-pressed="true">自动演示</button><button id="resetButton" class="text-button" type="button">重新开始</button></div>
-          <p class="keyboard-hint">方向键 / WASD 转向 · 按住场地拖动 · 空格暂停</p>
+          <div class="main-controls"><button id="startButton" class="primary" type="button">开始操控 <span aria-hidden="true">↗</span></button><button id="autoButton" class="secondary" type="button" aria-pressed="true">自动演示</button><button id="soundToggle" class="secondary sound-toggle" type="button" aria-pressed="false">♫ 开启声音</button><button id="resetButton" class="text-button" type="button">重新开始</button><button id="updateReopen" class="update-reopen" type="button" hidden>有更新</button></div>
+          <div class="input-hints"><p class="keyboard-hint">拖动场地：360° 转向 · 方向键 / WASD：可斜走 · Q / E：连续绕弯 · 空格：暂停</p><p id="gamepadStatus" class="gamepad-status" role="status">手柄：请按一下手柄按键连接</p><p class="gamepad-guide">手柄：摇杆 / 十字键转向 · Y↑ A↓ X← B→ · 菜单键暂停 / 继续</p></div>
         </div>
         <div class="direction-pad" aria-label="方向控制"><button data-direction="up" aria-label="向上" type="button">↑</button><button data-direction="left" aria-label="向左" type="button">←</button><button data-direction="down" aria-label="向下" type="button">↓</button><button data-direction="right" aria-label="向右" type="button">→</button></div>
+        <section id="updateNotice" class="update-notice" role="dialog" aria-modal="false" aria-labelledby="updateTitle" hidden>
+          <div aria-live="polite"><h2 id="updateTitle">游戏有更新</h2><p id="updateDetail">新版已准备好。更新后会重新开始本局，已保存的设置会保留。</p></div>
+          <div class="update-actions"><button id="updateLater" type="button">稍后再说</button><button id="updateApply" type="button">立即更新</button></div>
+        </section>
       </section>
-      <aside class="sidebar">
-        <section class="bag-card"><span class="section-kicker">一路收集</span><h2>我的汉字队伍</h2><p>每个字，都是身体的一节。</p><div id="glyphBag" class="glyph-bag" aria-label="当前队伍中的汉字"></div><div class="collected-line">本次收集 <strong id="collectedCount">0</strong> 个字</div></section>
-        <section class="guide-card"><span class="guide-star" aria-hidden="true">✦</span><h2>跟着小飞星，慢慢来</h2><p>找到上面的目标字，靠近它，就能让队伍再长一节。</p><p>转弯的时候，字也会跟着走，每个字都端端正正。</p></section>
-      </aside>
     </div>
   </main>
+  <section id="tuningPanel" class="tuning-panel" aria-label="游戏参数调试面板" hidden>
+    <div class="tuning-header"><div><span class="section-kicker">边玩边调</span><h2>游戏参数</h2></div><button id="tuningClose" type="button" aria-label="关闭游戏参数面板">×</button></div>
+    <p class="tuning-intro">拖动滑块或输入数值，立即体验变化。重新开局保留参数。</p>
+    <div id="tuningPresets" class="tuning-presets" aria-label="操作手感预设"></div>
+    <div class="tuning-meter">当前移动步长 <strong id="tuningStep">1.13 单位/步</strong></div>
+    <div id="tuningFields"></div>
+    <details class="tuning-json"><summary>复制 / 导入参数配置</summary><textarea id="tuningJson" rows="9" spellcheck="false" aria-label="移动参数 JSON 配置"></textarea><div><button id="tuningCopyJson" type="button">复制配置</button><button id="tuningApplyJson" type="button">应用配置</button></div></details>
+    <footer class="tuning-footer"><button id="tuningReset" type="button">恢复默认参数</button><span id="tuningStatus" role="status">即时生效 · 已保存在本机</span></footer>
+  </section>
   <script type="module" src="./src/game.js"></script>
 </body>
 </html>
